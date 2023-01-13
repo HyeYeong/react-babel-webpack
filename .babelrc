@@ -1,0 +1,5 @@
+// babelrc는, babel에게.. 예를들어, ESNext구문을 보면 코드를 브라우저가 이해할 수 있는 구문으로 변환하고 계속 진행해줘, 라고 요구 할 수 있다. 
+// 프리셋을 설치해야한다. 
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"]
+}
