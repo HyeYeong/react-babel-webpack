@@ -1,4 +1,5 @@
 var path = require("path")
+const ___dirname = path.resolve()
 
 module.exports = {
   entry: "./src/index.js", // 웹팩은 index.js 파일 안에 있는 import 문부터 시작해서 모든 의존관계 그래프를 자동으로 만든다.
