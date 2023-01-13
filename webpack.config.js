@@ -1,4 +1,5 @@
-var path = require("path")
+const path = require("path")
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ___dirname = path.resolve()
 
 module.exports = {
@@ -13,5 +14,10 @@ module.exports = {
         exclude: /node_modules/, // node_modules 폴더의 자바스크립트 파일 이외의, 모든 자바스크립트 파일에 대해 babel-loader를 실행한다.
         loader: "babel-loader"
     }]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+        template: "./index.html"
+    })
+  ]
 }
