@@ -5,5 +5,12 @@ module.exports = {
   output: {
     path: path.join(___dirname, "dist", "assets"),
     filename: "bundle.js" // dist/bundle.js 에 패키징한 자바스크립트 파일을 넣어준다.
+  },
+  module: {
+      rules: [{
+        test: /\.js$/, // 로더가 작용해야 하는 파일 경로를 찾기 위한 정규식
+        exclude: /node_modules/, // node_modules 폴더의 자바스크립트 파일 이외의, 모든 자바스크립트 파일에 대해 babel-loader를 실행한다.
+        loader: "babel-loader"
+    }]
   }
 }
